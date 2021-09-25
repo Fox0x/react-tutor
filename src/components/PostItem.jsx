@@ -1,8 +1,10 @@
 import '../styles/PostItem.css'
 import React from 'react';
 import MyButton from "./UI/button/MyButton";
+import {useHistory} from "react-router-dom";
 
 const PostItem = (props) => {
+    const router = useHistory()
     return (
         <div className={'post'}>
             <div className={'post-content'}>
@@ -10,6 +12,7 @@ const PostItem = (props) => {
                 <div>{props.post.body}</div>
             </div>
             <div className={'post-btns'}>
+                <MyButton onClick={() => router.push(`/posts/${props.post.id}`)}>Открыть</MyButton>
                 <MyButton onClick={() => props.remove(props.post)}>Удалить</MyButton>
             </div>
 

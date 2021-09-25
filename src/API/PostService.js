@@ -10,4 +10,8 @@ export default class PostService {
                 }
             })
     }
+
+    static async getOne(id) {
+        return await axios.get('https://jsonplaceholder.typicode.com/posts/' + id)
+    }
 }

@@ -1,4 +1,5 @@
 const {useMemo} = require("react");
+
 export const usePagination = (totalPages) => {
 
     const pagesArray = []
