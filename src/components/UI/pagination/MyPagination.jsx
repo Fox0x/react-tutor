@@ -1,6 +1,6 @@
 import './MyPagination.css'
 import React from 'react';
-import {usePagination} from "../../../hooks/usePagination";
+import {usePagination} from "../../../hooks/usePagination.js";
 
 const MyPagination = ({totalPages, page, changePage}) => {
     const pagesArray = usePagination(totalPages)
